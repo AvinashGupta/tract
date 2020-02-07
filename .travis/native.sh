@@ -27,6 +27,7 @@ then
     CACHEDIR=`dirname $0`/../.cached
 fi
 
+cargo check --tests --all --all-features
 cargo build --release
 cargo test --release --all
 cargo build --release --benches
