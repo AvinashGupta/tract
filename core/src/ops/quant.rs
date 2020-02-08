@@ -292,7 +292,7 @@ impl TypedOp for DequantizeLinearF32 {
         target.wire_node(&*node.name, self.clone(), &[input])
     }
 
-    typed_op_as_op!();
+    as_op!();
 }
 
 impl PulsedOp for DequantizeLinearF32 {
@@ -302,7 +302,7 @@ impl PulsedOp for DequantizeLinearF32 {
         Ok(tvec!(fact))
     }
 
-    pulsed_op_as_op!();
+    as_op!();
     pulsed_op_to_typed_op!();
 }
 
